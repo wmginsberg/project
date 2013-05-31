@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta content='WeDidIt is an online &amp; mobile platform for nonprofit fundraising. We give organizations the tools they need to develop, and launch engaging crowdfunding campaigns! Signup and get started!' name='description'>
+<title>WeDidIt </title>
+<link href="/assets/jquery-ui-1.8.16.custom.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/assets/application.js" type="text/javascript"></script>
+<link href="/assets/application.css" media="screen" rel="stylesheet" type="text/css" />
+<!--[if gte IE 9]>
+<link href="/assets/ie9.css" media="screen" rel="stylesheet" type="text/css" />
+<![endif]-->
+<meta content="authenticity_token" name="csrf-param" />
+<meta content="2uVEXZV5+rwNQbG3XvMWvZWk7fGtGfiHsb+HNJ18gRk=" name="csrf-token" />
+
+</head>
+<body class='body_home' id='home_predictive_fundraising'>
+<div class='wrapper'>
+<script>
+  //<![CDATA[
+    $(function() {
+      var header_container = $("#header_container");
+    
+      var floatingStartPosition = header_container.offset().top;
+                 
+      var floatingHeader = function() {
+        var scroll_top = $(window).scrollTop();
+             
+        if (scroll_top > floatingStartPosition) {
+          header_container.css({ 'position': 'fixed', "top": 0, "box-shadow": "0px 2px 5px 0px rgba(0, 0, 0, .5)", "-webkit-box-shadow": "0px 2px 5px 0px rgba(0, 0, 0, .5)", "border": "none"});
+        } else {
+          header_container.css({ 'position': 'relative', "box-shadow": "none", "-webkit-box-shadow": "none", "border-bottom": "1px solid #d2d2d2"});
+        }  
+      };
+         
+      floatingHeader();
+           
+      $(window).scroll(function() {
+        floatingHeader();
+      });
+    });
+  //]]>
+</script>
+<div class='header_wrap'>
+<header id='header_container'>
+<div class='container'>
+<div class='img_header'>
+<a href='/'>
+<img class='logo_tree' src='/assets/logo_tree.png'>
+<img class='logo_wedidit' src='/assets/logo.png'>
+</a>
+</div>
+<div class='nav_header'>
+<ul>
+<li>
+<a href="/start_your_campaign">Start Campaign</a>
+</li>
+<li>
+<a href="/learning_resources">What Is WeDidIt?</a>
+</li>
+<li>
+<a href="/secret_sauce">Features</a>
+</li>
+<li>
+<a href="/pricing">Pricing</a>
+</li>
+<li>
+<a href="/help">Help</a>
+</li>
+<li>
+<a href="/users/sign_up">Sign Up</a>
+<ul>
+<li>
+<a href="/users/sign_in">Sign In</a>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</header>
+</div>
+
+<div class='col1'>
+<div class='shadow'></div>
+</div>
+<div class='container'>
+<div class='mask'>
+Your potential fundraising amount is
+$3,590.11
+<h2>Predict your fundraising potential</h2>
+<form accept-charset="UTF-8" action="/predictive_fundraising" class="formtastic predictive_model" method="post" novalidate="novalidate"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /><input name="authenticity_token" type="hidden" value="2uVEXZV5+rwNQbG3XvMWvZWk7fGtGfiHsb+HNJ18gRk=" /></div>
+<fieldset class="inputs"><div class="string input required stringish" id="predictive_model_email_input"><label class=" label" for="predictive_model_email">Email contacts *</label><input id="predictive_model_email" name="predictive_model[email]" type="text" value="100" />
+<div class="hint"></div></div>
+<div class="string input required stringish" id="predictive_model_twitter_input"><label class=" label" for="predictive_model_twitter">Twitter followers *</label><input id="predictive_model_twitter" name="predictive_model[twitter]" type="text" value="230" />
+<div class="hint"></div></div>
+<div class="string input required stringish" id="predictive_model_facebook_input"><label class=" label" for="predictive_model_facebook">Facebook followers *</label><input id="predictive_model_facebook" name="predictive_model[facebook]" type="text" value="300" />
+<div class="hint"></div></div>
+</fieldset><fieldset class="actions"><input name="commit" type="submit" value="Submit Predictive model" />
+</fieldset></form>
+
+</div>
+</div>
+<div class='clear'></div>
+</div>
+<footer>
+<div class='footer'>
+<div class='cont'>
+<nav class='feature'>
+<span>WeDidIt</span>
+<ul>
+<li><a href="/mobile">Go Mobile</a></li>
+<li><a href="/secret_sauce">Secret Sauce</a></li>
+<li><a href="/case_studies">Case Studies</a></li>
+<li><a href="/testimonials">Testimonials</a></li>
+<li><a href="/campaigns">Browse Campaigns</a></li>
+</ul>
+</nav>
+<nav class='meet_us'>
+<span>Meet us</span>
+<ul>
+<li><a href="/our_story">About us</a></li>
+<li><a href="/press">Press</a></li>
+<li><a href="http://wediditnyc.wordpress.com/" target="_blank">Blog</a></li>
+<li><a href="/contact_us">Contact us</a></li>
+</ul>
+</nav>
+<nav class='help'>
+<span>Help</span>
+<ul>
+<li><a href="/faqs">FAQ</a></li>
+<li><a href="/tips_tricks">Tips and Tricks</a></li>
+<li><a href="/who_are_you">Who are you?</a></li>
+<li><a href="/learning_resources">Learning Resources</a></li>
+</ul>
+</nav>
+<div class='legal'>
+<span>
+WeDidIt © 2013
+</span>
+<div class='copyright'>
+All Rights Reserved
+</div>
+<ul>
+<li><a href="/terms_of_service">Terms</a></li>
+<li><a href="/privacy_policy">Privacy</a></li>
+</ul>
+</div>
+<div class='connect'>
+<span>Connect with WeDidIt</span>
+<div class='icons'>
+<a class='facebook' href='http://www.facebook.com/pages/WeDidIt/270320582999415' target='_blank'></a>
+<a class='twitter' href='https://twitter.com/WeDidItNYC' target='_blank'></a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+
+</body>
+</html>
